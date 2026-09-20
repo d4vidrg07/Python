@@ -1,11 +1,7 @@
 from sample_data import data
 
-# get_hardest_exam(data, subject_code)
-# Given an academic data structure (subjects, students, exams) and a subject
-# code, returns a tuple (description, date, average grade) for the exam with
-# the lowest average grade in that subject.
-# Returns "NOASIG" if the subject does not exist and "NOEXAM" if it has no exams.
-# Note: exam exercise. The data structure format was provided by the assignment.
+    """Return (description, date, average) of the exam with the lowest
+    average grade for the given subject, or "NOASIG" / "NOEXAM"."""
 
 
 def get_hardest_exam(data, subject_code):
