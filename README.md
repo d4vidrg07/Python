@@ -8,7 +8,7 @@ Python exercises and exam solutions from my Computer Engineering degree at ULPGC
 |---|---|
 | [`linked-lists/`](linked-lists) | Linked list implementations (singly and doubly linked): a generic list with insertion at the start, end and any position, plus applications such as a browser history, a loan register, a music playlist and a task list. |
 | [`oop/`](oop) | Object-oriented programming: classes, encapsulation with private attributes and properties, class attributes and relationships between classes (bank account, transport card, orders, playlists, student enrollment). |
-| [`algorithms/`](algorithms) | Highlights from the Algorithms and Programming course: list and string exercises with their own READMEs and tests. |
+| [`algorithms/`](algorithms) | Highlights from the Algorithms and Programming course, with links to the full exercises in their own repository. |
 | [`exams/`](exams) | Solutions to exam exercises: nested dictionaries ([`hardest-exam`](exams/hardest-exam)) and regular expressions with text file output ([`select-strs-regex`](exams/select-strs-regex)). |
 
 ## Skills shown
