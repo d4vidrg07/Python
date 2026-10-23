@@ -14,7 +14,7 @@ Python exercises and exam solutions from my Computer Engineering degree at ULPGC
 ## Skills shown
 
 - **Data structures:** lists, dictionaries and linked lists (singly and doubly linked).
-- **Algorithms:** list and string processing and the algorithmic exercises from the Algorithms and Programming course. Those live in their own repository: [Algorithms-and-Programming-](https://github.com/d4vidrg07/Algorithms-and-Programming-).
+- **Algorithms:** list and string processing and the algorithmic exercises from the Algorithms and Programming course. Those live in their own repository: [Algorithms-and-Programming](https://github.com/d4vidrg07/Algorithms-and-Programming).
 - **Object-oriented programming:** classes, encapsulation, class attributes and properties.
 - **Text processing:** regular expressions and file reading and writing.
 
