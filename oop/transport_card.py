@@ -44,7 +44,7 @@ class TarjetaTransporte:
 
     @classmethod
     def total_tarjetas_emitidas(cls):
-        return len(cls._todas_las_tarjetas)    #solo quiere saber la cantidad
+        return len(cls._todas_las_tarjetas)    #it only needs the count
     @classmethod
     def viajes_titular(cls, nombre_titular):
         total_viajes = 0

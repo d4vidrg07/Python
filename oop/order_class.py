@@ -1,7 +1,7 @@
 from productos import Productos
 
 class Pedido:
-    # Atributo de clase para contar pedidos cerrados
+    # Class attribute to count closed orders
     __pedidos_cerrados = 0
 
     def __init__(self, id_pedido, cliente):
@@ -9,7 +9,7 @@ class Pedido:
         self.__id_pedido = id_pedido
         self.__cliente = cliente
         self.__abierto = True
-        self.__lineas = [] # Lista de tuplas (id_producto, cantidad)
+        self.__lineas = [] # List of tuples (product id, quantity)
 
     @property
     def id(self):
@@ -21,34 +21,34 @@ class Pedido:
 
     @property
     def cerrado(self):
-        # Retorna True si NO está abierto
+        # Returns True if it is NOT open
         return not self.__abierto
 
     @property
     def total(self):
         suma_total = 0.0
         for id_prod, cant in self.__lineas:
-            # Obtenemos info del producto usando el método de clase Productos.stock
+            # We get the product info using the class method Productos.stock
             info = Productos.stock(id_prod)
             if info:
-                # info[1] es el precio según la letra del ejercicio
+                # info[1] is the price according to the exercise statement
                 suma_total += info[1] * cant
         return suma_total
 
     def agregar(self, id_producto, cantidad=1):
-        # 1. Validar tipo y cantidad
+        # 1. Validate type and quantity
         if not isinstance(cantidad, int) or cantidad < 1:
             raise ValueError("La cantidad debe ser un entero mayor o igual a 1")
         
-        # 2. Validar si el pedido está cerrado
+        # 2. Check whether the order is closed
         if not self.__abierto:
             raise ValueError("No se pueden añadir productos a un pedido cerrado")
         
-        # 3. Validar disponibilidad del producto
+        # 3. Check product availability
         if Productos.stock(id_producto) is None:
             raise ValueError(f"El producto {id_producto} no está disponible")
         
-        # Guardamos la línea como una tupla
+        # We store the line as a tuple
         self.__lineas.append((id_producto, cantidad))
 
     def cerrar(self):
@@ -58,11 +58,11 @@ class Pedido:
             raise ValueError("No se puede cerrar un pedido sin líneas")
         
         self.__abierto = False
-        # Acceso al atributo de clase para contabilizar
+        # Access the class attribute to keep the count
         Pedido.__pedidos_cerrados += 1
 
     def lineas_pedido(self):
-        # Retorna una copia de la lista de líneas
+        # Returns a copy of the list of lines
         return self.__lineas
 
     @classmethod
